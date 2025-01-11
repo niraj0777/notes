@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ note.title }}</h2>
+<p>{{ note.content }}</p>
+<p><small>Created at: {{ note.created_at }}</small></p>
+<a href="{% url 'note_list' %}">Back to Notes</a>
+{% endblock %}

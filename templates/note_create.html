@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Create a Note</h2><br>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button><br>
+</form>
+<a href="{% url 'note_list' %}">Back to Notes</a>
+{% endblock %}
